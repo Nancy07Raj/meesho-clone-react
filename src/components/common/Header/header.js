@@ -6,7 +6,12 @@ import meeshoLogo from 'assets/svg/meesho-logo.svg';
 function Header() {
 	return (
 		<Styled.Container>
-			<Image src={meeshoLogo} alt="meesho-logo" />
+			<Styled.TopHeader>
+				<Styled.TopLink>
+					<Image src={meeshoLogo} alt="meesho-logo" />
+					<Styled.SearchBox></Styled.SearchBox>
+				</Styled.TopLink>
+			</Styled.TopHeader>
 		</Styled.Container>
 	);
 }
