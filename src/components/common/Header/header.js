@@ -9,7 +9,9 @@ function Header() {
 			<Styled.TopHeader>
 				<Styled.TopLink>
 					<Image src={meeshoLogo} alt="meesho-logo" />
-					<Styled.SearchBox></Styled.SearchBox>
+					<Styled.SearchBox>
+						<Styled.SearchInput placeholder="Try Saree, Kurti or Search by Product Code" />
+					</Styled.SearchBox>
 				</Styled.TopLink>
 			</Styled.TopHeader>
 		</Styled.Container>

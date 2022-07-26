@@ -23,10 +23,14 @@ const TopLink = styled(Flex)`
 
 const SearchBox = styled.nav`
 	position: relative;
+	width: 400px;
+	height: 40px;
+	border: 1px solid ${(props) => props.theme.colors.SpanishGray};
+	border-radius: 4px;
 	&:before {
 		position: absolute;
-		left: 30px;
-		top: 18px;
+		left: 20px;
+		top: 10px;
 		display: inline-block;
 		content: ' ';
 		width: 20px;
@@ -36,4 +40,22 @@ const SearchBox = styled.nav`
 	}
 `;
 
-export { Container, TopHeader, SearchBox, TopLink };
+const SearchInput = styled.input.attrs((props) => ({
+	placeholder: props.placeholder,
+}))`
+	font: 'Mier B Book';
+	font-size: 1rem;
+	font-style: normal;
+	letter-spacing: 0.0025em;
+	border: 0;
+	margin-left: 50px;
+	margin-top: 10px;
+	width: 340px;
+	color: ${(props) => props.theme.colors.jet};
+	caret-color: ${(props) => props.theme.colors.primary};
+	&:focus {
+		outline: none;
+	}
+`;
+
+export { Container, TopHeader, SearchBox, TopLink, SearchInput };
