@@ -1,1 +1,1 @@
-export { default as Header } from 'components/common/Header/header';
+export { default as Header } from 'components/common/Header';

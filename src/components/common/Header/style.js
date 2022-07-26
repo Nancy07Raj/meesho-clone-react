@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Flex } from 'components/atom';
+import { Flex, Box } from 'components/atom';
 import searchIcon from 'assets/svg/search.svg';
 
 const Container = styled.header`
@@ -14,23 +14,23 @@ const TopHeader = styled.nav`
 `;
 
 const TopLink = styled(Flex)`
-	align-items: center;
+	/* align-items: center; */
 	justify-content: space-between;
 	padding: 0.5rem 0;
-	max-width: 1280px;
-	margin: 0 auto;
+	margin: 0 10px;
 `;
 
 const SearchBox = styled.nav`
 	position: relative;
 	width: 400px;
-	height: 40px;
+	height: 50px;
+	margin-left: 20px;
 	border: 1px solid ${(props) => props.theme.colors.SpanishGray};
 	border-radius: 4px;
 	&:before {
 		position: absolute;
-		left: 20px;
-		top: 10px;
+		left: 10px;
+		top: 15px;
 		display: inline-block;
 		content: ' ';
 		width: 20px;
@@ -46,10 +46,11 @@ const SearchInput = styled.input.attrs((props) => ({
 	font: 'Mier B Book';
 	font-size: 1rem;
 	font-style: normal;
+	font-size: 16px;
 	letter-spacing: 0.0025em;
 	border: 0;
-	margin-left: 50px;
-	margin-top: 10px;
+	margin-left: 40px;
+	margin-top: 15px;
 	width: 340px;
 	color: ${(props) => props.theme.colors.jet};
 	caret-color: ${(props) => props.theme.colors.primary};
@@ -58,4 +59,16 @@ const SearchInput = styled.input.attrs((props) => ({
 	}
 `;
 
-export { Container, TopHeader, SearchBox, TopLink, SearchInput };
+const HeaderText = styled(Box)`
+	font-family: 'Mier B Book';
+	color: ${(props) => props.theme.colors.jet};
+	font-size: 16px;
+	line-height: 20px;
+	padding: 0 1rem;
+`;
+
+const SubHeader = styled.nav`
+	border: 1px solid ${(props) => props.theme.colors.SpanishGray};
+`;
+
+export { Container, TopHeader, SearchBox, TopLink, SearchInput, HeaderText, SubHeader };
