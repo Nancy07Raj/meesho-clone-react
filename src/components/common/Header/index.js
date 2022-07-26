@@ -5,6 +5,7 @@ import meeshoLogo from 'assets/svg/meesho-logo.svg';
 import download from 'assets/svg/download.svg';
 import cart from 'assets/svg/cart.svg';
 import profile from 'assets/svg/profile.svg';
+import { links } from 'components/helper/static-data';
 
 function Header() {
 	return (
@@ -37,6 +38,13 @@ function Header() {
 						</Flex>
 					</Flex>
 				</Styled.TopLink>
+			</Styled.TopHeader>
+			<Styled.TopHeader>
+				<Styled.Link>
+					{links.map((link) => (
+						<Styled.LinkText key={link.id}>{link.text}</Styled.LinkText>
+					))}
+				</Styled.Link>
 			</Styled.TopHeader>
 		</Styled.Container>
 	);

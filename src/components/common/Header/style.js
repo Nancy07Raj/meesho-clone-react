@@ -2,11 +2,12 @@ import styled from 'styled-components';
 import { Flex, Box } from 'components/atom';
 import searchIcon from 'assets/svg/search.svg';
 
-const Container = styled.header`
+const Container = styled(Flex)`
 	position: fixed;
 	left: 0;
 	top: 0;
 	width: 100%;
+	flex-direction: column;
 `;
 
 const TopHeader = styled.nav`
@@ -64,11 +65,24 @@ const HeaderText = styled(Box)`
 	color: ${(props) => props.theme.colors.jet};
 	font-size: 16px;
 	line-height: 20px;
+	font-weight: 600;
 	padding: 0 1rem;
 `;
 
-const SubHeader = styled.nav`
-	border: 1px solid ${(props) => props.theme.colors.SpanishGray};
+const Link = styled(Flex)`
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 10px;
 `;
 
-export { Container, TopHeader, SearchBox, TopLink, SearchInput, HeaderText, SubHeader };
+const LinkText = styled(HeaderText)`
+	padding: 15px 0;
+	font-family: 'Mier A Book';
+	border-bottom: 3px solid white;
+	&:hover {
+		color: ${(props) => props.theme.colors.primary};
+		border-bottom: 3px solid ${(props) => props.theme.colors.primary};
+	}
+`;
+
+export { Container, TopHeader, SearchBox, TopLink, SearchInput, HeaderText, Link, LinkText };
