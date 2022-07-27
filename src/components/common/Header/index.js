@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Image, Flex } from 'components/atom';
 import * as Styled from './style';
 import meeshoLogo from 'assets/svg/meesho-logo.svg';
@@ -8,6 +8,7 @@ import profile from 'assets/svg/profile.svg';
 import { links } from 'components/helper/static-data';
 
 function Header() {
+	const [menu, setMenu] = useState([]);
 	return (
 		<Styled.Container>
 			<Styled.TopHeader>
@@ -41,11 +42,25 @@ function Header() {
 			</Styled.TopHeader>
 			<Styled.TopHeader>
 				<Styled.Link>
-					{links.map((link) => (
-						<Styled.LinkText key={link.id}>{link.text}</Styled.LinkText>
+					{links?.map((link) => (
+						<Styled.LinkText key={link.id} onMouseEnter={() => setMenu(link?.subMenus)}>
+							{link.text}
+						</Styled.LinkText>
 					))}
 				</Styled.Link>
 			</Styled.TopHeader>
+			{menu?.length > 0 && (
+				<Styled.Menu>
+					{menu?.map((m) => (
+						<Styled.SubMenu key={m.id}>
+							<Styled.MenuTitle key={m.id}>{m?.menuTitle}</Styled.MenuTitle>
+							{m?.menus?.map((item) => (
+								<Styled.MenuLink key={item?.id}>{item?.text}</Styled.MenuLink>
+							))}
+						</Styled.SubMenu>
+					))}
+				</Styled.Menu>
+			)}
 		</Styled.Container>
 	);
 }

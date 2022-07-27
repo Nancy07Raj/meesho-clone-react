@@ -85,4 +85,51 @@ const LinkText = styled(HeaderText)`
 	}
 `;
 
-export { Container, TopHeader, SearchBox, TopLink, SearchInput, HeaderText, Link, LinkText };
+const Menu = styled(Flex)`
+	justify-content: space-between;
+	margin: 0 10px;
+	padding: 10px;
+	border: 1px solid ${(props) => props.theme.colors.Cultured};
+	box-shadow: rgb(0 0 0 / 5%) 2px 2px 4px 0px;
+	border-width: 0px 0.5px 0.5px;
+	align-items: flex-start;
+	/* animation: 200ms ease-in 0s 1 normal none running fadeIn; */
+`;
+
+const SubMenu = styled(Flex)`
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+`;
+
+const MenuTitle = styled.div`
+	color: ${(props) => props.theme.colors.primary};
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	margin-bottom: 1rem;
+`;
+
+const MenuLink = styled(Flex)`
+	color: ${(props) => props.theme.colors.jet};
+	cursor: pointer;
+	font-weight: 400;
+	font-family: 'Mier book';
+	line-height: 20px;
+	padding: 3px 0;
+`;
+
+export {
+	Container,
+	TopHeader,
+	SearchBox,
+	TopLink,
+	SearchInput,
+	HeaderText,
+	Link,
+	LinkText,
+	Menu,
+	SubMenu,
+	MenuTitle,
+	MenuLink,
+};
