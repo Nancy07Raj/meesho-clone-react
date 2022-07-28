@@ -1,3 +1,4 @@
+import { Link as A } from 'react-router-dom';
 import styled from 'styled-components';
 import { Flex, Box } from 'components/atom';
 import searchIcon from 'assets/svg/search.svg';
@@ -8,6 +9,7 @@ const Container = styled(Flex)`
 	top: 0;
 	width: 100%;
 	flex-direction: column;
+	background-color: white;
 `;
 
 const TopHeader = styled.nav`
@@ -69,7 +71,7 @@ const HeaderText = styled(Box)`
 	padding: 0 1rem;
 `;
 
-const Link = styled(Flex)`
+const Links = styled(Flex)`
 	justify-content: space-between;
 	align-items: center;
 	margin: 0 10px;
@@ -77,8 +79,10 @@ const Link = styled(Flex)`
 
 const LinkText = styled(HeaderText)`
 	padding: 15px 0;
-	font-family: 'Mier A Book';
 	border-bottom: 3px solid white;
+	color: ${(props) => props.theme.colors.jet};
+	font-family: 'Mier book';
+	font-weight: 400;
 	&:hover {
 		color: ${(props) => props.theme.colors.primary};
 		border-bottom: 3px solid ${(props) => props.theme.colors.primary};
@@ -110,13 +114,14 @@ const MenuTitle = styled.div`
 	margin-bottom: 1rem;
 `;
 
-const MenuLink = styled(Flex)`
+const MenuLink = styled(A)`
 	color: ${(props) => props.theme.colors.jet};
 	cursor: pointer;
 	font-weight: 400;
-	font-family: 'Mier book';
+	font-family: 'Mier B Book';
 	line-height: 20px;
 	padding: 3px 0;
+	text-decoration: none;
 `;
 
 export {
@@ -126,7 +131,7 @@ export {
 	TopLink,
 	SearchInput,
 	HeaderText,
-	Link,
+	Links,
 	LinkText,
 	Menu,
 	SubMenu,

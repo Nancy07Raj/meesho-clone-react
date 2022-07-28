@@ -41,13 +41,13 @@ function Header() {
 				</Styled.TopLink>
 			</Styled.TopHeader>
 			<Styled.TopHeader>
-				<Styled.Link>
+				<Styled.Links>
 					{links?.map((link) => (
 						<Styled.LinkText key={link.id} onMouseEnter={() => setMenu(link?.subMenus)}>
 							{link.text}
 						</Styled.LinkText>
 					))}
-				</Styled.Link>
+				</Styled.Links>
 			</Styled.TopHeader>
 			{menu?.length > 0 && (
 				<Styled.Menu>
@@ -55,7 +55,9 @@ function Header() {
 						<Styled.SubMenu key={m.id}>
 							<Styled.MenuTitle key={m.id}>{m?.menuTitle}</Styled.MenuTitle>
 							{m?.menus?.map((item) => (
-								<Styled.MenuLink key={item?.id}>{item?.text}</Styled.MenuLink>
+								<Styled.MenuLink key={item?.id} to={item?.to}>
+									{item?.text}
+								</Styled.MenuLink>
 							))}
 						</Styled.SubMenu>
 					))}

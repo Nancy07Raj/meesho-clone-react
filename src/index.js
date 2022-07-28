@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import reset from 'styled-reset';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { theme } from 'styles/theme';
-import App from 'App';
+import AppRoute from './route';
+import 'assets/font/stylesheet.css';
 
 const GlobalStyle = createGlobalStyle`
 	${reset}
@@ -32,7 +33,7 @@ root.render(
 	<React.StrictMode>
 		<ThemeProvider theme={theme}>
 			<GlobalStyle />
-			<App />
+			<AppRoute />
 		</ThemeProvider>
 	</React.StrictMode>
 );
