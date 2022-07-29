@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { border, flexbox, grid, position, shadow, space } from 'styled-system';
+import { border, flexbox, grid, position, shadow, space, background } from 'styled-system';
 
 const Image = styled.img.attrs((props) => ({
 	src: props.src,
@@ -13,6 +13,7 @@ const Image = styled.img.attrs((props) => ({
 	${border}
 	${flexbox}
 	${shadow}
+	${background}
 	${({ circle }) =>
 		circle &&
 		css`
