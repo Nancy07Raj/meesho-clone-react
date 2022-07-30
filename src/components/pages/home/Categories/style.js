@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Flex, Box } from 'components/atom';
 
 export const Container = styled(Flex)`
-	width: 80%;
+	width: 75%;
 	margin: 150px auto 0;
 	background-color: ${(props) => props.theme.colors.Cultured};
 `;
@@ -11,9 +11,8 @@ export const Info = styled(Flex)`
 	flex-direction: column;
 	padding: 20px;
 	width: 611px;
-	justify-content: flex-start;
 	align-items: flex-start;
-	min-height: 336px;
+	min-height: 250px;
 	padding: 40px 67px 40px 48px;
 `;
 
@@ -35,14 +34,17 @@ export const BCard = styled(Flex)`
 `;
 
 export const Benefits = styled(Flex)`
-	height: 30px;
 	width: 120px;
+	margin: 0 3px;
 	&::before {
+		content: '';
 		border-left: 1px solid ${(props) => props.theme.colors.jet};
+		padding-left: 8px;
 	}
 	&:first-child {
 		&::before {
 			border-left: 0;
+			padding-left: 0;
 		}
 	}
 `;
@@ -57,4 +59,27 @@ export const BText = styled.span`
 	font-family: 'Mier demi';
 	margin: 0px;
 	padding: 0px 0px 0px 8px;
+`;
+
+export const Download = styled(Flex)`
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	align-items: center;
+	padding: 10px 28px;
+	background: ${(props) => props.theme.colors.primary};
+	border-radius: 4px;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+`;
+
+export const DownloadText = styled(Box)`
+	color: ${(props) => props.theme.colors.white};
+	margin: 0 10px;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 24px;
+	font-family: 'Mier demi';
 `;
