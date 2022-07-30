@@ -7,6 +7,7 @@ export default function Home() {
 		<>
 			<Header />
 			<Pages.Categories />
+			<Pages.Pictures />
 			<Footer />
 		</>
 	);
