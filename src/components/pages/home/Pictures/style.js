@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Flex } from 'components/atom';
+import Resell from 'assets/images/reseller.jpeg';
 
 export const Container = styled(Flex)`
 	flex-direction: column;
@@ -32,5 +33,16 @@ export const Fashion = styled(Flex)`
 	height: 430px;
 	width: 90%;
 	background-size: contain;
+	border-radius: 4px;
+`;
+
+export const Reseller = styled(Flex)`
+	justify-content: flex-end;
+	align-items: center;
+	background-image: url(${Resell});
+	margin: 48px auto 60px;
+	height: 430px;
+	width: 100%;
+	background-size: contain no-repeat;
 	border-radius: 4px;
 `;

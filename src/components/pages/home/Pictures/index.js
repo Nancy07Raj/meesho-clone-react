@@ -1,6 +1,6 @@
 import React from 'react';
 import BeautyBtn from 'assets/images/beauty-btn.jpg';
-import { Flex, Image } from 'components/atom';
+import { Flex, Image, Box } from 'components/atom';
 import * as Styled from './style';
 import WomensWear from 'assets/images/womens-wear.jpg';
 import MensWear from 'assets/images/mens-wear.jpg';
@@ -13,6 +13,8 @@ import Electronics from 'assets/images/electronics.jpg';
 import ViewAll from 'assets/images/view-all.jpg';
 import HomeBtn from 'assets/images/home-btn.jpg';
 import ElectronicsBtn from 'assets/images/electronics-btn.jpg';
+import GooglePlay from 'assets/images/google-play.png';
+import AppStore from 'assets/images/appstore.png';
 
 export default function Pictures() {
 	return (
@@ -44,6 +46,35 @@ export default function Pictures() {
 					</Flex>
 				</Flex>
 			</Styled.Fashion>
+			<Styled.Reseller>
+				<Flex m="0 20px" flexDirection="column" alignItems="flex-end">
+					<Box color="#5585F8" fontSize="38px" fontWeight={400} fontFamily="Mier Book">
+						Become a Reseller and
+					</Box>
+					<Box
+						color="#F43397"
+						fontSize="48px"
+						fontWeight={600}
+						fontFamily="Mier Book"
+						lineHeight="52px"
+					>
+						Start your Online Business
+					</Box>
+					<Box
+						color="#F43397"
+						fontSize="48px"
+						fontWeight={600}
+						fontFamily="Mier Book"
+						lineHeight="52px"
+					>
+						with Zero Investment
+					</Box>
+					<Flex>
+						<Image src={GooglePlay} width={150} height={40} m="3.125rem 10px" />
+						<Image src={AppStore} width={150} height={40} m=" 3.125rem 10px" />
+					</Flex>
+				</Flex>
+			</Styled.Reseller>
 		</Styled.Container>
 	);
 }
