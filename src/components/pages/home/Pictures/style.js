@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Flex } from 'components/atom';
-import Background from 'assets/images/home-banner.jpg';
 
 export const Container = styled(Flex)`
 	flex-direction: column;
@@ -27,7 +26,7 @@ export const Line = styled(Flex)`
 export const Fashion = styled(Flex)`
 	justify-content: space-between;
 	align-items: flex-end;
-	background-image: url(${Background});
+	background-image: url(${(props) => props.background});
 	margin: 48px auto 60px;
 	padding: 20px 24px 22px;
 	height: 430px;
