@@ -2,10 +2,51 @@ import { Link as A } from 'react-router-dom';
 import styled from 'styled-components';
 import { Flex, Box } from 'components/atom';
 
-export const FooterSection = styled(Flex)`
+export const Container = styled(Flex)`
 	flex-direction: column;
-	margin-top: 300px;
-	padding: 0 20px;
+	background-color: ${(props) => props.theme.colors.Cultured2};
+`;
+
+export const ShopTitle = styled(Box)`
+	color: ${(props) => props.theme.colors.jet};
+	font-style: normal;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 40px;
+	font-family: 'Mier bold';
+	margin: 10px 0;
+	padding: 0px;
+`;
+
+export const TrustPara = styled.p`
+	color: ${(props) => props.theme.colors.GraniteGray};
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 24px;
+	font-family: 'Mier book';
+	margin: 0px;
+	padding: 0px;
+`;
+
+export const ShopLink = styled.span`
+	color: ${(props) => props.theme.colors.GraniteGray};
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 24px;
+	font-family: 'Mier demi';
+	margin: 0px;
+	padding: 0px;
+`;
+
+export const FooterLink = styled(Flex)`
+	flex-direction: column;
+	margin: 300px 20px 40px;
+	padding: 20px;
+	border: 1px solid ${(props) => props.theme.colors.Gainsboro};
+	border-radius: 4px;
+	background-color: ${(props) => props.theme.colors.white};
 `;
 
 export const FooterTitle = styled(Box)`

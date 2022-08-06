@@ -30,7 +30,7 @@ export const Fashion = styled(Flex)`
 	justify-content: space-between;
 	align-items: flex-end;
 	background-image: url(${(props) => props.background});
-	margin: 48px auto 60px;
+	margin: 30px auto;
 	padding: 20px 24px 22px;
 	height: 430px;
 	width: 90%;
@@ -42,7 +42,7 @@ export const Reseller = styled(Flex)`
 	justify-content: flex-end;
 	align-items: center;
 	background-image: url(${Resell});
-	margin: 48px auto 60px;
+	margin: 30px auto;
 	height: 430px;
 	width: 100%;
 	background-size: contain no-repeat;
