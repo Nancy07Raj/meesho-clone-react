@@ -75,6 +75,22 @@ export default function Pictures() {
 					</Flex>
 				</Flex>
 			</Styled.Reseller>
+			<Styled.Supplier>
+				<Flex flexDirection="column" color="white" px="10%">
+					<Box fontSize="32px" lineHeight="40px" fontWeight="bold">
+						Register as a Meesho Customer
+					</Box>
+					<Box fontSize="16px" lineHeight="20px" fontWeight="400" mt="16px">
+						Sell your products to crores of customers at 0% commission
+					</Box>
+					<Flex my="5%">
+						<Styled.SupplierSpan>Grow your business 10x</Styled.SupplierSpan>
+						<Styled.SupplierSpan>Enjoy 100% Profit</Styled.SupplierSpan>
+						<Styled.SupplierSpan>Sell all over India</Styled.SupplierSpan>
+					</Flex>
+					<Styled.Signup>Sign up Now</Styled.Signup>
+				</Flex>
+			</Styled.Supplier>
 		</Styled.Container>
 	);
 }

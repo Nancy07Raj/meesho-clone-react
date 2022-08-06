@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Flex } from 'components/atom';
 import Resell from 'assets/images/reseller.jpeg';
+import supply from 'assets/images/supply_banner.jpg';
+import Tick from 'assets/images/tick.svg';
 
 export const Container = styled(Flex)`
 	flex-direction: column;
@@ -45,4 +47,48 @@ export const Reseller = styled(Flex)`
 	width: 100%;
 	background-size: contain no-repeat;
 	border-radius: 4px;
+`;
+
+export const Supplier = styled(Flex)`
+	justify-content: flex-start;
+	align-items: center;
+	background-image: url(${supply});
+	margin: 48px auto 60px;
+	height: 280px;
+	width: 100%;
+	background-size: contain no-repeat;
+	border-radius: 4px;
+`;
+
+export const SupplierSpan = styled(Flex)`
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	margin: 0px;
+	&::before {
+		content: url(${Tick});
+		padding-right: 10px;
+	}
+	&::after {
+		content: '|';
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	&:last-child {
+		&::after {
+			content: '';
+		}
+	}
+`;
+
+export const Signup = styled(Flex)`
+	background-color: white;
+	color: ${(props) => props.theme.colors.primary};
+	padding: 4%;
+	width: 108px;
+	border-radius: 4px;
+	padding: 10px 28px;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 24px;
 `;
