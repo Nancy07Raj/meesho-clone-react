@@ -14,8 +14,8 @@ export const ShopTitle = styled(Box)`
 	font-size: 32px;
 	line-height: 40px;
 	font-family: 'Mier bold';
-	margin: 10px 0;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 `;
 
 export const TrustPara = styled.p`
@@ -36,7 +36,7 @@ export const ShopLink = styled.span`
 	font-size: 18px;
 	line-height: 24px;
 	font-family: 'Mier demi';
-	margin: 0px;
+	margin: 5px 0;
 	padding: 0px;
 `;
 

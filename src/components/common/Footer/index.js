@@ -18,6 +18,18 @@ export default function Footer() {
 						<Image src={AppStore} width={200} height={50} />
 					</Flex>
 				</Flex>
+				<Flex flexDirection="column" ml="8%">
+					<Styled.ShopLink>Kurti</Styled.ShopLink>
+					<Styled.ShopLink>Sarees</Styled.ShopLink>
+					<Styled.ShopLink>legings</Styled.ShopLink>
+					<Styled.ShopLink>Tops</Styled.ShopLink>
+				</Flex>
+				<Flex flexDirection="column" ml="8%">
+					<Styled.ShopLink>Kurti</Styled.ShopLink>
+					<Styled.ShopLink>Sarees</Styled.ShopLink>
+					<Styled.ShopLink>legings</Styled.ShopLink>
+					<Styled.ShopLink>Tops</Styled.ShopLink>
+				</Flex>
 			</Flex>
 			<Styled.FooterLink>
 				<Styled.FooterTitle>Online Shopping</Styled.FooterTitle>
