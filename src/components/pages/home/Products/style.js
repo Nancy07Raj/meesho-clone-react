@@ -45,3 +45,8 @@ export const FCategoryName = styled(Box)`
 	line-height: 24px;
 	font-family: 'Mier demi';
 `;
+
+export const Card = styled(Flex)`
+	border: 1px solid ${(props) => props.theme.colors.Gainsboro};
+	border-radius: 8px;
+`;
