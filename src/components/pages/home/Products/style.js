@@ -49,11 +49,12 @@ export const FCategoryName = styled(Box)`
 export const Card = styled(Flex)`
 	border: 1px solid ${(props) => props.theme.colors.Gainsboro};
 	border-radius: 8px;
-	padding: 0 8px 8px;
+	/* padding: 0 8px 8px; */
 	flex-direction: column;
 	max-width: 25%;
-	margin-right: 20px;
-	height: 300px;
+	margin: 0px 15px 20px 0px;
+	padding: 0 10px;
+	height: auto;
 `;
 
 export const CardName = styled.p`
@@ -66,6 +67,8 @@ export const CardName = styled.p`
 	font-size: 16px;
 	line-height: 20px;
 	font-family: 'Mier book';
+	max-width: 90%;
+	margin-top: 10px;
 `;
 
 export const Rupee = styled.p`
@@ -84,8 +87,9 @@ export const Onwards = styled.p`
 	font-size: 12px;
 	line-height: 16px;
 	font-family: 'Mier demi';
-	background-color: ${(props) => props.theme.colors.Cultured};
 	padding: 2px;
+	margin: 5px 0;
+	margin-left: 10px;
 `;
 export const FreeDelivery = styled.p`
 	background-color: ${(props) => props.theme.colors.Cultured};
