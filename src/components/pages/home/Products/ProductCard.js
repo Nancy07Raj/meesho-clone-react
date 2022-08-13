@@ -10,7 +10,7 @@ export default function ProductCard() {
 				<S.Card key={item?.id}>
 					<Image src={item?.image} width={220} height={232} />
 					<S.CardName>{item?.title}</S.CardName>
-					<Flex width="45%" justifyContent="space-between">
+					<Flex>
 						<S.Rupee>{item?.offerPrice}</S.Rupee>
 						<S.Onwards>onwards</S.Onwards>
 					</Flex>
