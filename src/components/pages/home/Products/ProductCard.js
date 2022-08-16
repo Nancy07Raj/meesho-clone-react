@@ -5,7 +5,7 @@ import * as S from './style';
 
 export default function ProductCard() {
 	return (
-		<Flex flexWrap="wrap" width="80%" ml="10px">
+		<Flex flexWrap="wrap" width="80%" ml="10px" height="20%">
 			{products?.map((item) => (
 				<S.Card key={item?.id}>
 					<Image src={item?.image} width={220} height={232} />
@@ -15,8 +15,9 @@ export default function ProductCard() {
 						<S.Onwards>onwards</S.Onwards>
 					</Flex>
 					<S.FreeDelivery>Free Delivery</S.FreeDelivery>
-					<Flex mt="10px">
+					<Flex my="10px" alignItems="center" bg="white">
 						<S.Rating>{item?.rating}</S.Rating>
+						<S.Review>{item?.totalReviews} Reviews</S.Review>
 					</Flex>
 				</S.Card>
 			))}

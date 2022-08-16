@@ -132,3 +132,13 @@ export const Rating = styled.span`
 		background-size: contain;
 	}
 `;
+
+export const Review = styled.span`
+	color: ${(props) => props.theme.colors.SpanishGray};
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 16px;
+	font-family: 'Mier demi';
+	padding: 0px 5px;
+`;
