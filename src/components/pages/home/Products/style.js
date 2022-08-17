@@ -114,7 +114,6 @@ export const Rating = styled.span`
 	font-size: 16px;
 	line-height: 20px;
 	font-family: 'Mier A Demi';
-	position: relative;
 	border-radius: 1rem;
 	display: inline-flex;
 	justify-content: center;
