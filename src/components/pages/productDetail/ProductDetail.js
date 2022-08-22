@@ -1,11 +1,20 @@
 import React from 'react';
 import { Flex, Image } from 'components/atom';
 import TShirt from 'assets/images/tshirt-black.jpg';
+import * as S from './style';
 
 export default function ProductDetail() {
 	return (
-		<Flex alignItems="center">
-			<Image src={TShirt} height={200} width={100} />
-		</Flex>
+		<S.container>
+			<Image src={TShirt} height={50} width={40} />
+			<S.ImageView>
+				<Flex border="1px solid #f0f0f0" alignItems="center" justifyContent="center">
+					<Image src={TShirt} height={400} width={350} />
+				</Flex>
+				<Flex mt="20px">
+					<S.CartBtn>Add to Cart</S.CartBtn>
+				</Flex>
+			</S.ImageView>
+		</S.container>
 	);
 }
