@@ -11,8 +11,9 @@ export default function ProductDetail() {
 				<Flex border="1px solid #f0f0f0" alignItems="center" justifyContent="center">
 					<Image src={TShirt} height={400} width={350} />
 				</Flex>
-				<Flex mt="20px">
+				<Flex mt="20px" justifyContent="space-between">
 					<S.CartBtn>Add to Cart</S.CartBtn>
+					<S.BuyNow>Buy Now</S.BuyNow>
 				</Flex>
 			</S.ImageView>
 		</S.container>
