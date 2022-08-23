@@ -52,11 +52,12 @@ export const Card = styled(Flex)`
 	border-radius: 8px;
 	/* padding: 0 8px 8px; */
 	flex-direction: column;
-	max-width: 21%;
-	min-width: 21%;
+	max-width: ${(props) => props.width || '21%'};
+	min-width: ${(props) => props.width || '21%'};
 	margin: 0px 15px 20px 0px;
-	padding: 0 10px;
-	height: auto;
+	width: ${(props) => props.width};
+	padding: ${(props) => props.padding || '0 10px'};
+	height: ${(props) => props.height || 'auto'};
 `;
 
 export const CardName = styled.p`
