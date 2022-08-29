@@ -5,6 +5,8 @@ import { Flex, Box } from 'components/atom';
 export const Container = styled(Flex)`
 	flex-direction: column;
 	background-color: ${(props) => props.theme.colors.Cultured2};
+	margin: 0 auto;
+	max-width: 1280px;
 `;
 
 export const ShopTitle = styled(Box)`

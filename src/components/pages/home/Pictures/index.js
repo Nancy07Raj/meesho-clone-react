@@ -5,8 +5,8 @@ import * as Styled from './style';
 import WomensWear from 'assets/images/womens-wear.jpg';
 import MensWear from 'assets/images/mens-wear.jpg';
 import KidsWear from 'assets/images/kids-wear.jpg';
-import FBackground from 'assets/images/home-banner.jpg';
-import EBackground from 'assets/images/essentials-bg1.jpg';
+// import FBackground from 'assets/images/home-banner.jpg';
+// import EBackground from 'assets/images/essentials-bg1.jpg';
 import Beauty from 'assets/images/beauty.jpg';
 import Home from 'assets/images/home.jpg';
 import Electronics from 'assets/images/electronics.jpg';
@@ -24,28 +24,28 @@ export default function Pictures() {
 				<Styled.Title>Top Categories to choose from</Styled.Title>
 				<Styled.Line />
 			</Flex>
-			<Styled.Fashion background={FBackground}>
-				<Image src={WomensWear} width={350} height={400} />
-				<Image src={MensWear} width={250} height={250} />
-				<Image src={KidsWear} width={250} height={250} />
+			<Styled.Fashion>
+				<Image src={WomensWear} width={320} height={400} />
+				<Image src={MensWear} width={230} height={250} />
+				<Image src={KidsWear} width={230} height={250} />
 			</Styled.Fashion>
-			<Styled.Fashion background={EBackground}>
+			<Styled.Electronics>
 				<Image src={ViewAll} width={150} height={50} mb={180} ml="60px" />
 				<Flex>
 					<Flex flexDirection="column" m="0 8px 45px" alignItems="center">
-						<Image src={Beauty} width={180} height={300} />
+						<Image src={Beauty} width={180} height={270} />
 						<Image src={BeautyBtn} width={150} height={50} />
 					</Flex>
 					<Flex flexDirection="column" alignItems="center" mx="8px">
-						<Image src={Home} width={180} height={300} />
+						<Image src={Home} width={180} height={270} />
 						<Image src={HomeBtn} width={150} height={50} />
 					</Flex>
 					<Flex flexDirection="column" alignItems="center" mx="8px">
-						<Image src={Electronics} width={180} height={300} />
+						<Image src={Electronics} width={180} height={270} />
 						<Image src={ElectronicsBtn} width={150} height={50} />
 					</Flex>
 				</Flex>
-			</Styled.Fashion>
+			</Styled.Electronics>
 			<Styled.Reseller>
 				<Flex m="0 20px" flexDirection="column" alignItems="flex-end">
 					<Box color="#5585F8" fontSize="38px" fontWeight={400} fontFamily="Mier Book">

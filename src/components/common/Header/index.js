@@ -11,58 +11,63 @@ function Header() {
 	const [menu, setMenu] = useState([]);
 	return (
 		<Styled.Container>
-			<Styled.TopHeader>
-				<Styled.TopLink>
-					<Flex>
-						<Image src={meeshoLogo} alt="meesho-logo" />
-						<Styled.SearchBox>
-							<Styled.SearchInput placeholder="Try Saree, Kurti or Search by Product Code" />
-						</Styled.SearchBox>
-					</Flex>
-					<Flex alignItems="center">
-						<Flex borderRight="2px solid #DFDFDF" alignItems="center" height="30px">
-							<Image src={download} alt="mobile" width={20} height={20} />
-							<Styled.HeaderText>Download</Styled.HeaderText>
+			<Styled.Content>
+				<Styled.TopHeader>
+					<Styled.TopLink>
+						<Flex>
+							<Image src={meeshoLogo} alt="meesho-logo" />
+							<Styled.SearchBox>
+								<Styled.SearchInput placeholder="Try Saree, Kurti or Search by Product Code" />
+							</Styled.SearchBox>
 						</Flex>
-						<Flex borderRight="2px solid #DFDFDF" alignItems="center" height="30px">
-							<Styled.HeaderText>Become a Supplier</Styled.HeaderText>
-						</Flex>
-						<Flex alignItems="center" justifyContent="center" height="30px">
-							<Flex flexDirection="column" alignItems="center">
-								<Image src={profile} alt="mobile" width={20} height={20} />
-								<Styled.HeaderText>Profile</Styled.HeaderText>
+						<Flex alignItems="center">
+							<Flex borderRight="2px solid #DFDFDF" alignItems="center" height="30px">
+								<Image src={download} alt="mobile" width={20} height={20} />
+								<Styled.HeaderText>Download</Styled.HeaderText>
 							</Flex>
-							<Flex flexDirection="column" alignItems="center">
-								<Image src={cart} alt="mobile" width={20} height={20} />
-								<Styled.HeaderText>Cart</Styled.HeaderText>
+							<Flex borderRight="2px solid #DFDFDF" alignItems="center" height="30px">
+								<Styled.HeaderText>Become a Supplier</Styled.HeaderText>
+							</Flex>
+							<Flex alignItems="center" justifyContent="center" height="30px">
+								<Flex flexDirection="column" alignItems="center">
+									<Image src={profile} alt="mobile" width={20} height={20} />
+									<Styled.HeaderText>Profile</Styled.HeaderText>
+								</Flex>
+								<Flex flexDirection="column" alignItems="center">
+									<Image src={cart} alt="mobile" width={20} height={20} />
+									<Styled.HeaderText>Cart</Styled.HeaderText>
+								</Flex>
 							</Flex>
 						</Flex>
-					</Flex>
-				</Styled.TopLink>
-			</Styled.TopHeader>
-			<Styled.TopHeader>
-				<Styled.Links>
-					{links?.map((link) => (
-						<Styled.LinkText key={link.id} onMouseEnter={() => setMenu(link?.subMenus)}>
-							{link.text}
-						</Styled.LinkText>
-					))}
-				</Styled.Links>
-			</Styled.TopHeader>
-			{menu?.length > 0 && (
-				<Styled.Menu>
-					{menu?.map((m) => (
-						<Styled.SubMenu key={m.id}>
-							<Styled.MenuTitle key={m.id}>{m?.menuTitle}</Styled.MenuTitle>
-							{m?.menus?.map((item) => (
-								<Styled.MenuLink key={item?.id} to={item?.to}>
-									{item?.text}
-								</Styled.MenuLink>
-							))}
-						</Styled.SubMenu>
-					))}
-				</Styled.Menu>
-			)}
+					</Styled.TopLink>
+				</Styled.TopHeader>
+				<Styled.TopHeader>
+					<Styled.Links>
+						{links?.map((link) => (
+							<Styled.LinkText
+								key={link.id}
+								onMouseEnter={() => setMenu(link?.subMenus)}
+							>
+								{link.text}
+							</Styled.LinkText>
+						))}
+					</Styled.Links>
+				</Styled.TopHeader>
+				{menu?.length > 0 && (
+					<Styled.Menu>
+						{menu?.map((m) => (
+							<Styled.SubMenu key={m.id}>
+								<Styled.MenuTitle key={m.id}>{m?.menuTitle}</Styled.MenuTitle>
+								{m?.menus?.map((item) => (
+									<Styled.MenuLink key={item?.id} to={item?.to}>
+										{item?.text}
+									</Styled.MenuLink>
+								))}
+							</Styled.SubMenu>
+						))}
+					</Styled.Menu>
+				)}
+			</Styled.Content>
 		</Styled.Container>
 	);
 }

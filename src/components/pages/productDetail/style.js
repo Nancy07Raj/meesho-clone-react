@@ -44,25 +44,3 @@ export const BuyNow = styled(Flex)`
 	padding: 12px;
 	border-radius: 4px;
 `;
-
-export const PInfo = styled(Flex)`
-	width: 500px;
-	margin: 0 20px;
-	padding: 20px;
-	height: 150px;
-	border: 1px solid ${(props) => props.theme.colors.Cultured};
-	justify-content: flex-start;
-	align-items: flex-start;
-	flex-direction: column;
-	border-radius: 8px;
-`;
-
-export const PTitle = styled.span`
-	color: ${(props) => props.theme.colors.SpanishGray};
-	font-style: normal;
-	font-weight: 400;
-	font-size: 20px;
-	line-height: 24px;
-	font-family: 'Mier demi';
-	letter-spacing: 1px;
-`;

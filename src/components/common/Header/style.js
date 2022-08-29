@@ -4,12 +4,17 @@ import { Flex, Box } from 'components/atom';
 import searchIcon from 'assets/svg/search.svg';
 
 const Container = styled(Flex)`
+	margin: 0 auto;
+	max-width: 1280px;
+`;
+
+const Content = styled.header`
 	position: fixed;
 	left: 0;
 	top: 0;
 	width: 100%;
-	flex-direction: column;
-	background-color: white;
+	z-index: 1000;
+	background-color: ${(props) => props.theme.colors.white};
 `;
 
 const TopHeader = styled.nav`
@@ -137,4 +142,5 @@ export {
 	SubMenu,
 	MenuTitle,
 	MenuLink,
+	Content,
 };

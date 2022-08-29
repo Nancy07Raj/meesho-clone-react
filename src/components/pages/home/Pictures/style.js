@@ -3,11 +3,15 @@ import { Flex } from 'components/atom';
 import Resell from 'assets/images/reseller.jpeg';
 import supply from 'assets/images/supply_banner.jpg';
 import Tick from 'assets/images/tick.svg';
+import FBackground from 'assets/images/home-banner.jpg';
+import EBackground from 'assets/images/essentials-bg1.jpg';
 
 export const Container = styled(Flex)`
 	flex-direction: column;
 	width: 75%;
 	margin: 3.5rem auto 0;
+	justify-content: center;
+	align-items: center;
 `;
 
 export const Title = styled(Flex)`
@@ -29,13 +33,17 @@ export const Line = styled(Flex)`
 export const Fashion = styled(Flex)`
 	justify-content: space-between;
 	align-items: flex-end;
-	background-image: url(${(props) => props.background});
-	margin: 30px auto;
+	background-image: url(${FBackground});
+	margin: 30px 0;
 	padding: 20px 24px 22px;
-	height: 430px;
-	width: 90%;
+	/* height: 430px; */
+	width: 80%;
 	background-size: contain;
 	border-radius: 4px;
+`;
+
+export const Electronics = styled(Fashion)`
+	background-image: url(${EBackground});
 `;
 
 export const Reseller = styled(Flex)`

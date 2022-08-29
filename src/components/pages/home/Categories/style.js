@@ -5,6 +5,8 @@ export const Container = styled(Flex)`
 	width: 75%;
 	margin: 150px auto 0;
 	background-color: ${(props) => props.theme.colors.Cultured};
+	justify-content: center;
+	align-items: center;
 `;
 
 export const Info = styled(Flex)`
