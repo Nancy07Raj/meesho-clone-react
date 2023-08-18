@@ -59,7 +59,11 @@ function Header() {
 							<Styled.SubMenu key={m.id}>
 								<Styled.MenuTitle key={m.id}>{m?.menuTitle}</Styled.MenuTitle>
 								{m?.menus?.map((item) => (
-									<Styled.MenuLink key={item?.id} to={item?.to}>
+									<Styled.MenuLink
+										key={item?.id}
+										to={item?.to}
+										onClick={() => setMenu('')}
+									>
 										{item?.text}
 									</Styled.MenuLink>
 								))}

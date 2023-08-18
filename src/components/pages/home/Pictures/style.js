@@ -3,12 +3,12 @@ import { Flex } from 'components/atom';
 import Resell from 'assets/images/reseller.jpeg';
 import supply from 'assets/images/supply_banner.jpg';
 import Tick from 'assets/images/tick.svg';
-import FBackground from 'assets/images/home-banner.jpg';
-import EBackground from 'assets/images/essentials-bg1.jpg';
+import FBackground from 'assets/images/fashion-store-new.jpg';
+import EBackground from 'assets/images/essential-bg-new.jpg';
 
 export const Container = styled(Flex)`
 	flex-direction: column;
-	width: 75%;
+	width: 95%;
 	margin: 3.5rem auto 0;
 	justify-content: center;
 	align-items: center;
@@ -21,24 +21,27 @@ export const Title = styled(Flex)`
 	letter-spacing: 0.7px;
 	color: ${(props) => props.theme.colors.jet};
 	text-align: center;
-	margin: 0 50px;
+	margin: 0 10px;
 `;
 
 export const Line = styled(Flex)`
 	background: ${(props) => props.theme.colors.primary};
-	width: 22%;
+	width: 24%;
 	height: 1px;
 `;
 
 export const Fashion = styled(Flex)`
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: flex-end;
+	gap: 15px;
 	background-image: url(${FBackground});
-	margin: 30px 0;
-	padding: 20px 24px 22px;
-	/* height: 430px; */
-	width: 80%;
-	background-size: contain;
+	background-repeat: no-repeat;
+	background-size: stretch;
+	margin: 30px auto;
+	padding: 90px 24px 35px;
+	margin: 48px 0px 60px;
+	// width: 85%;
+	background-size: 100% 100%;
 	border-radius: 4px;
 `;
 

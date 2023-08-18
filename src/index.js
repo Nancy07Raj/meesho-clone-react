@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     font-size: 1rem;
     font-weight: 400;
+	font-family: "Mier Book";
     letter-spacing: 0.5px;
     line-height: 1.5;
     text-align: left;

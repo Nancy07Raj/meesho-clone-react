@@ -2,11 +2,12 @@ import styled from 'styled-components';
 import { Flex, Box } from 'components/atom';
 
 export const Container = styled(Flex)`
-	width: 75%;
-	margin: 150px auto 0;
+	width: 85%;
+	margin: 20px auto 0;
 	background-color: ${(props) => props.theme.colors.Cultured};
 	justify-content: center;
 	align-items: center;
+	border-radius: 4px;
 `;
 
 export const Info = styled(Flex)`
