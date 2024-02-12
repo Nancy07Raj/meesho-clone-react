@@ -2,7 +2,7 @@
 
 export const theme = {
 	colors: {
-		primary: '#f43397',
+		primary: ' #9F2089',
 		text: 'black',
 		white: '#fff',
 		jet: '#333333',
@@ -15,6 +15,7 @@ export const theme = {
 		MediumSeaGreen: '#23bb75',
 		RaisinBlack: '#202024',
 		CarnationPink: '#f7a8ca',
+		Border: '#cecede',
 	},
 	fontSize: {
 		xl: '2.4rem',

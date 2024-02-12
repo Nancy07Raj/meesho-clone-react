@@ -20,21 +20,24 @@ function Header() {
 								<Styled.SearchInput placeholder="Try Saree, Kurti or Search by Product Code" />
 							</Styled.SearchBox>
 						</Flex>
-						<Flex alignItems="center">
+						<Flex alignItems="center" justifyContent="flex-end">
 							<Flex borderRight="2px solid #DFDFDF" alignItems="center" height="30px">
-								<Image src={download} alt="mobile" width={20} height={20} />
-								<Styled.HeaderText>Download</Styled.HeaderText>
+								<Image src={download} alt="mobile" height={20} />
+								<Styled.HeaderText>Download App</Styled.HeaderText>
 							</Flex>
 							<Flex borderRight="2px solid #DFDFDF" alignItems="center" height="30px">
 								<Styled.HeaderText>Become a Supplier</Styled.HeaderText>
 							</Flex>
+							<Flex borderRight="2px solid #DFDFDF" alignItems="center" height="30px">
+								<Styled.HeaderText>Newsroom</Styled.HeaderText>
+							</Flex>
 							<Flex alignItems="center" justifyContent="center" height="30px">
 								<Flex flexDirection="column" alignItems="center">
-									<Image src={profile} alt="mobile" width={20} height={20} />
+									<Image src={profile} alt="mobile" height={20} />
 									<Styled.HeaderText>Profile</Styled.HeaderText>
 								</Flex>
 								<Flex flexDirection="column" alignItems="center">
-									<Image src={cart} alt="mobile" width={20} height={20} />
+									<Image src={cart} alt="mobile" height={20} />
 									<Styled.HeaderText>Cart</Styled.HeaderText>
 								</Flex>
 							</Flex>

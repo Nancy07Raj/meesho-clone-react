@@ -5,40 +5,40 @@ import searchIcon from 'assets/svg/search.svg';
 
 const Container = styled(Flex)`
 	margin: 0 auto;
-	max-width: 1280px;
 `;
 
 const Content = styled.header`
 	position: fixed;
 	left: 0;
 	top: 0;
+	margin: 0 auto;
 	width: 100%;
 	z-index: 1000;
 	background-color: ${(props) => props.theme.colors.white};
 `;
 
 const TopHeader = styled.nav`
-	border-bottom: 1px solid ${(props) => props.theme.colors.Cultured};
+	border-bottom: 1px solid ${(props) => props.theme.colors.Border};
 `;
 
 const TopLink = styled(Flex)`
-	/* align-items: center; */
-	justify-content: space-between;
+	// align-items: center;
+	justify-content: space-around;
 	padding: 0.5rem 0;
-	margin: 0 10px;
+	// margin: 0 auto;
 `;
 
 const SearchBox = styled.nav`
 	position: relative;
 	width: 400px;
-	height: 50px;
+	height: 40px;
 	margin-left: 20px;
 	border: 1px solid ${(props) => props.theme.colors.SpanishGray};
 	border-radius: 4px;
 	&:before {
 		position: absolute;
 		left: 10px;
-		top: 15px;
+		top: 10px;
 		display: inline-block;
 		content: ' ';
 		width: 20px;
@@ -58,7 +58,7 @@ const SearchInput = styled.input.attrs((props) => ({
 	letter-spacing: 0.0025em;
 	border: 0;
 	margin-left: 40px;
-	margin-top: 15px;
+	margin-top: 10px;
 	width: 340px;
 	color: ${(props) => props.theme.colors.jet};
 	caret-color: ${(props) => props.theme.colors.primary};
@@ -72,14 +72,15 @@ const HeaderText = styled(Box)`
 	color: ${(props) => props.theme.colors.jet};
 	font-size: 16px;
 	line-height: 20px;
-	font-weight: 600;
+	font-weight: 400;
 	padding: 0 1rem;
 `;
 
 const Links = styled(Flex)`
-	justify-content: space-between;
+	justify-content: space-evenly;
 	align-items: center;
-	margin: 0 10px;
+	// margin: 0 auto;
+	padding: 0rem 2rem;
 `;
 
 const LinkText = styled(HeaderText)`
@@ -88,6 +89,7 @@ const LinkText = styled(HeaderText)`
 	color: ${(props) => props.theme.colors.jet};
 	font-family: 'Mier book';
 	font-weight: 400;
+	font-size: 16px;
 	&:hover {
 		color: ${(props) => props.theme.colors.primary};
 		border-bottom: 3px solid ${(props) => props.theme.colors.primary};
@@ -96,9 +98,9 @@ const LinkText = styled(HeaderText)`
 
 const Menu = styled(Flex)`
 	justify-content: space-between;
-	margin: 0 10px;
+	margin: 0 4rem;
 	padding: 10px;
-	border: 1px solid ${(props) => props.theme.colors.Cultured};
+	border: 1px solid ${(props) => props.theme.colors.Border};
 	box-shadow: rgb(0 0 0 / 5%) 2px 2px 4px 0px;
 	border-width: 0px 0.5px 0.5px;
 	align-items: flex-start;
@@ -124,7 +126,7 @@ const MenuLink = styled(A)`
 	cursor: pointer;
 	font-weight: 400;
 	font-family: 'Mier B Book';
-	line-height: 20px;
+	line-height: 30px;
 	padding: 3px 0;
 	text-decoration: none;
 `;
