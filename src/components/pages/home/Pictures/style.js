@@ -31,31 +31,32 @@ export const Line = styled(Flex)`
 `;
 
 export const Fashion = styled(Flex)`
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: flex-end;
 	gap: 15px;
 	background-image: url(${FBackground});
 	background-repeat: no-repeat;
 	background-size: stretch;
 	margin: 30px auto;
-	padding: 90px 24px 35px;
+	padding: 90px 0px 35px;
 	margin: 48px 0px 60px;
-	// width: 85%;
+	width: 90%;
 	background-size: 100% 100%;
-	border-radius: 4px;
+	// border-radius: 4px;
 `;
 
 export const Electronics = styled(Fashion)`
 	background-image: url(${EBackground});
+	justify-content: space-around;
 `;
 
 export const Reseller = styled(Flex)`
 	justify-content: flex-end;
-	align-items: center;
+	align-items: flex-start;
 	background-image: url(${Resell});
 	margin: 30px auto;
-	height: 430px;
-	width: 100%;
+	height: 550px;
+	width: 90%;
 	background-size: contain no-repeat;
 	border-radius: 4px;
 `;
@@ -65,8 +66,8 @@ export const Supplier = styled(Flex)`
 	align-items: center;
 	background-image: url(${supply});
 	margin: 48px auto 60px;
-	height: 280px;
-	width: 100%;
+	height: 300px;
+	width: 90%;
 	background-size: contain no-repeat;
 	border-radius: 4px;
 `;

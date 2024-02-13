@@ -19,40 +19,42 @@ import AppStore from 'assets/images/appstore.png';
 export default function Pictures() {
 	return (
 		<Styled.Container>
-			<Flex alignItems="center" justifyContent="space-between" width="85%">
+			<Flex alignItems="center" justifyContent="space-between" width="90%">
 				<Styled.Line />
 				<Styled.Title>Top Categories to choose from</Styled.Title>
 				<Styled.Line />
 			</Flex>
 			<Styled.Fashion>
-				<Image src={WomensWear} width={350} height={430} />
+				<Image src={WomensWear} width={420} height={430} />
 				<Image src={MensWear} width={300} height={290} />
 				<Image src={KidsWear} width={300} height={290} />
 			</Styled.Fashion>
 			<Styled.Electronics>
-				<Image src={ViewAll} width={150} height={50} mb={180} ml="60px" />
+				<Flex>
+					<Image src={ViewAll} width={150} height={50} mb={180} ml="40px" />
+				</Flex>
 				<Flex>
 					<Flex flexDirection="column" m="0 8px 45px" alignItems="center">
-						<Image src={Beauty} width={180} height={270} />
+						<Image src={Beauty} width={200} height={300} />
 						<Image src={BeautyBtn} width={150} height={50} />
 					</Flex>
 					<Flex flexDirection="column" alignItems="center" mx="8px">
-						<Image src={Home} width={180} height={270} />
+						<Image src={Home} width={200} height={300} />
 						<Image src={HomeBtn} width={150} height={50} />
 					</Flex>
 					<Flex flexDirection="column" alignItems="center" mx="8px">
-						<Image src={Electronics} width={180} height={270} />
+						<Image src={Electronics} width={200} height={300} />
 						<Image src={ElectronicsBtn} width={150} height={50} />
 					</Flex>
 				</Flex>
 			</Styled.Electronics>
 			<Styled.Reseller>
-				<Flex m="0 20px" flexDirection="column" alignItems="flex-end">
+				<Flex m="30px 20px 20px" flexDirection="column" alignItems="flex-end">
 					<Box color="#5585F8" fontSize="38px" fontWeight={400} fontFamily="Mier Book">
 						Become a Reseller and
 					</Box>
 					<Box
-						color="#F43397"
+						color="#9F2089"
 						fontSize="48px"
 						fontWeight={600}
 						fontFamily="Mier Book"
@@ -61,7 +63,7 @@ export default function Pictures() {
 						Start your Online Business
 					</Box>
 					<Box
-						color="#F43397"
+						color="#9F2089"
 						fontSize="48px"
 						fontWeight={600}
 						fontFamily="Mier Book"
@@ -80,7 +82,7 @@ export default function Pictures() {
 					<Box fontSize="32px" lineHeight="40px" fontWeight="bold">
 						Register as a Meesho Customer
 					</Box>
-					<Box fontSize="16px" lineHeight="20px" fontWeight="400" mt="16px">
+					<Box fontSize="18px" lineHeight="20px" fontWeight="400" mt="16px">
 						Sell your products to crores of customers at 0% commission
 					</Box>
 					<Flex my="5%">
