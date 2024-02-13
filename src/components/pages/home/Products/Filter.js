@@ -8,6 +8,11 @@ export default function Filter() {
 	return (
 		<S.FilterContainer>
 			<S.FilterCategory>
+				<Flex>
+					<h3>Sort By</h3>
+				</Flex>
+			</S.FilterCategory>
+			<S.FilterCategory>
 				<Flex flexDirection="column">
 					<S.FCategoryName>FILTER</S.FCategoryName>
 					<Box fontSize="10px" color="#666666">

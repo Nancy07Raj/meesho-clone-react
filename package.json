@@ -16,7 +16,7 @@
     "styled-system": "^5.1.5",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://Nancy07Raj.github.io/meesho-clone-react",
+  "homepage": "https://Nancy07Raj.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
