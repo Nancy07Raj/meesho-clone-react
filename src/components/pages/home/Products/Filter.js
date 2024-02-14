@@ -14,7 +14,7 @@ export default function Filter() {
 				<S.FilterCategory>
 					<Flex flexDirection="column">
 						<S.FCategoryName>FILTER</S.FCategoryName>
-						<Box fontSize="10px" color="#666666">
+						<Box fontSize="12px" color="#666666">
 							1000+ Products
 						</Box>
 					</Flex>
