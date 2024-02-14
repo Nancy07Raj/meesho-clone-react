@@ -57,7 +57,7 @@ function Header() {
 					</Styled.Links>
 				</Styled.TopHeader>
 				{menu?.length > 0 && (
-					<Styled.Menu>
+					<Styled.Menu onMouseLeave={() => setMenu([])}>
 						{menu?.map((m) => (
 							<Styled.SubMenu key={m.id} color={m.id % 2 === 0}>
 								<Styled.MenuTitle key={m.id}>{m?.menuTitle}</Styled.MenuTitle>

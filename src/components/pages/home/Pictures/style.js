@@ -3,8 +3,8 @@ import { Flex } from 'components/atom';
 import Resell from 'assets/images/reseller.jpeg';
 import supply from 'assets/images/supply_banner.jpg';
 import Tick from 'assets/images/tick.svg';
-import FBackground from 'assets/images/fashion-store-new.jpg';
-import EBackground from 'assets/images/essential-bg-new.jpg';
+import FBackground from 'assets/images/new_bg.jpg';
+import EBackground from 'assets/images/essential_bg_new.jpg';
 
 export const Container = styled(Flex)`
 	flex-direction: column;

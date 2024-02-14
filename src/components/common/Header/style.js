@@ -108,6 +108,7 @@ const Menu = styled(Flex)`
 	box-shadow: rgb(0 0 0 / 5%) 2px 2px 4px 0px;
 	border-width: 0px 0.5px 0.5px;
 	align-items: flex-start;
+
 	/* animation: 200ms ease-in 0s 1 normal none running fadeIn; */
 `;
 

@@ -4,7 +4,7 @@ import ratingStar from 'assets/svg/rating-star.svg';
 
 export const Container = styled(Flex)`
 	flex-direction: column;
-	margin: 20px 20px 0;
+	margin: 20px 0;
 `;
 
 export const Title = styled(Box)`
@@ -22,9 +22,14 @@ export const Title = styled(Box)`
 export const FilterContainer = styled(Flex)`
 	flex-direction: column;
 	padding: 20px;
-	width: 20%;
+	width: 25%;
+	gap: 20px;
+`;
+
+export const FliterBorder = styled(Flex)`
 	border: 1px solid ${(props) => props.theme.colors.Gainsboro};
-	border-radius: 8px;
+	border-radius: 4px;
+	padding: 10px 20px;
 `;
 
 export const FilterCategory = styled(Flex)`
