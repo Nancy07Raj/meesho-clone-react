@@ -44,7 +44,7 @@ function Header() {
 						</Flex>
 					</Styled.TopLink>
 				</Styled.TopHeader>
-				<Styled.TopHeader>
+				<Styled.TopHeader borderBottom={2}>
 					<Styled.Links>
 						{links?.map((link) => (
 							<Styled.LinkText
@@ -59,7 +59,7 @@ function Header() {
 				{menu?.length > 0 && (
 					<Styled.Menu>
 						{menu?.map((m) => (
-							<Styled.SubMenu key={m.id}>
+							<Styled.SubMenu key={m.id} color={m.id % 2 === 0}>
 								<Styled.MenuTitle key={m.id}>{m?.menuTitle}</Styled.MenuTitle>
 								{m?.menus?.map((item) => (
 									<Styled.MenuLink

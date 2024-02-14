@@ -16,7 +16,8 @@ export const Container = styled(Flex)`
 
 export const Title = styled(Flex)`
 	font-family: 'Mier Bold';
-	font-size: 36px;
+	font-size: 40px;
+	font-weight: 600;
 	line-height: 54px;
 	letter-spacing: 0.7px;
 	color: ${(props) => props.theme.colors.jet};

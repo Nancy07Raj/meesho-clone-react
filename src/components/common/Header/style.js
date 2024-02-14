@@ -18,13 +18,16 @@ const Content = styled.header`
 `;
 
 const TopHeader = styled.nav`
-	border-bottom: 1px solid ${(props) => props.theme.colors.Border};
+	border-bottom: ${(props) =>
+		props.borderBottom
+			? `2px solid ${props.theme.colors.Border}`
+			: `1px solid ${props.theme.colors.Border}`};
 `;
 
 const TopLink = styled(Flex)`
 	// align-items: center;
 	justify-content: space-around;
-	padding: 0.5rem 0;
+	padding: 1.5rem 0;
 	// margin: 0 auto;
 `;
 
@@ -97,9 +100,10 @@ const LinkText = styled(HeaderText)`
 `;
 
 const Menu = styled(Flex)`
-	justify-content: space-between;
+	justify-content: flex-start;
+	column-gap: 40px;
 	margin: 0 4rem;
-	padding: 10px;
+	padding: 10px 20px 0;
 	border: 1px solid ${(props) => props.theme.colors.Border};
 	box-shadow: rgb(0 0 0 / 5%) 2px 2px 4px 0px;
 	border-width: 0px 0.5px 0.5px;
@@ -109,8 +113,11 @@ const Menu = styled(Flex)`
 
 const SubMenu = styled(Flex)`
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: flex-start;
+	align-self: stretch;
+	padding: 0 10px;
+	background-color: ${(props) => props.color && '#f8f8ff'};
 `;
 
 const MenuTitle = styled.div`
