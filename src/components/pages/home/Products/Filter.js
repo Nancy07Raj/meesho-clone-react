@@ -33,11 +33,30 @@ const items = [
 	},
 ];
 
+const CheckboxList = [
+	{
+		id: 1,
+		list: 'Checkbox1',
+	},
+	{
+		id: 2,
+		list: 'Checkbox2',
+	},
+	{
+		id: 3,
+		list: 'Checkbox3',
+	},
+];
+
 const CollapseDropdown = [
 	{
 		key: 1,
 		label: 'Category',
-		children: <Checkbox>Checkbox</Checkbox>,
+		children: CheckboxList?.map((c) => (
+			<Flex key={c.id} flexDirection="column">
+				<Checkbox>{c?.list}</Checkbox>
+			</Flex>
+		)),
 	},
 ];
 export default function Filter() {
