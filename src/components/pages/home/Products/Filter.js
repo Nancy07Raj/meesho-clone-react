@@ -1,5 +1,5 @@
 import React from 'react';
-import { Select } from 'antd';
+import { Select, Checkbox, Collapse } from 'antd';
 import DownArrow from 'assets/svg/down-arrow.svg';
 import { Flex, Box, Image } from 'components/atom';
 import * as S from './style';
@@ -33,6 +33,13 @@ const items = [
 	},
 ];
 
+const CollapseDropdown = [
+	{
+		key: 1,
+		label: 'Category',
+		children: <Checkbox>Checkbox</Checkbox>,
+	},
+];
 export default function Filter() {
 	return (
 		<S.FilterContainer>
@@ -58,6 +65,10 @@ export default function Filter() {
 							1000+ Products
 						</Box>
 					</Flex>
+				</S.FilterCategory>
+
+				<S.FilterCategory>
+					<Collapse items={CollapseDropdown} bordered={false} defaultActiveKey={['1']} />
 				</S.FilterCategory>
 
 				{productTypes.map((filter) => (
