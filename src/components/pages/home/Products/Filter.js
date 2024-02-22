@@ -1,9 +1,12 @@
 import React from 'react';
-import { Select, Checkbox, Collapse } from 'antd';
+import { Select, Checkbox, Collapse, Input } from 'antd';
+import { SearchOutlined } from '@ant-design/icons';
 import DownArrow from 'assets/svg/down-arrow.svg';
 import { Flex, Box, Image } from 'components/atom';
 import * as S from './style';
 import { productTypes } from 'components/helper/static-data';
+
+const { Search } = Input;
 
 const items = [
 	{
@@ -36,15 +39,23 @@ const items = [
 const CheckboxList = [
 	{
 		id: 1,
-		list: 'Checkbox1',
+		list: 'Women T-shirt',
 	},
 	{
 		id: 2,
-		list: 'Checkbox2',
+		list: 'Bedsheet',
 	},
 	{
 		id: 3,
-		list: 'Checkbox3',
+		list: 'Blouse',
+	},
+	{
+		id: 3,
+		list: 'Handbags',
+	},
+	{
+		id: 3,
+		list: 'Kids Toys',
 	},
 ];
 
@@ -52,11 +63,16 @@ const CollapseDropdown = [
 	{
 		key: 1,
 		label: <S.FCategoryName>Category</S.FCategoryName>,
-		children: CheckboxList?.map((c) => (
-			<Flex key={c.id} flexDirection="column">
-				<Checkbox>{c?.list}</Checkbox>
-			</Flex>
-		)),
+		children: (
+			<>
+				<Search placeholder="Search" prefix={<SearchOutlined />} />
+				{CheckboxList?.map((c) => (
+					<Flex key={c.id} flexDirection="column" padding="5px 0">
+						<Checkbox>{c?.list}</Checkbox>
+					</Flex>
+				))}
+			</>
+		),
 		showArrow: false,
 		extra: (
 			<Box>

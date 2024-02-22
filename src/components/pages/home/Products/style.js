@@ -47,6 +47,22 @@ export const FilterCategory = styled(Flex)`
 		.ant-collapse-header {
 			padding: 0;
 		}
+		.ant-collapse-content-box {
+			padding: 0;
+			.ant-checkbox-wrapper {
+				color: #666666;
+				font-size: 16px;
+			}
+			.ant-input-wrapper {
+				.ant-input-group-addon {
+					display: none;
+				}
+				.ant-input-affix-wrapper {
+					border-radius: 4px;
+					margin: 10px 0;
+				}
+			}
+		}
 	}
 `;
 
