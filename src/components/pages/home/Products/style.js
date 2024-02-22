@@ -42,6 +42,12 @@ export const FilterCategory = styled(Flex)`
 		padding-top: 15;
 		padding-bottom: 0;
 	}
+	.ant-collapse {
+		width: 100%;
+		.ant-collapse-header {
+			padding: 0;
+		}
+	}
 `;
 
 export const FCategoryName = styled(Box)`
