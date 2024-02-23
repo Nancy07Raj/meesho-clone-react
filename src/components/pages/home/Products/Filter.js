@@ -1,5 +1,5 @@
 import React from 'react';
-import { Select, Checkbox, Collapse, Input } from 'antd';
+import { Select, Checkbox, Input, Collapse } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import DownArrow from 'assets/svg/down-arrow.svg';
 import { Flex, Box, Image } from 'components/atom';
@@ -36,51 +36,27 @@ const items = [
 	},
 ];
 
-const CheckboxList = [
-	{
-		id: 1,
-		list: 'Women T-shirt',
-	},
-	{
-		id: 2,
-		list: 'Bedsheet',
-	},
-	{
-		id: 3,
-		list: 'Blouse',
-	},
-	{
-		id: 3,
-		list: 'Handbags',
-	},
-	{
-		id: 3,
-		list: 'Kids Toys',
-	},
-];
+const CollapseList = productTypes?.map((p) => ({
+	key: p?.id,
+	label: <S.FCategoryName>{p?.name}</S.FCategoryName>,
+	children: (
+		<>
+			<Search placeholder="Search" prefix={<SearchOutlined />} />
+			{p?.list?.map((c) => (
+				<Flex key={c.id} flexDirection="column" padding="5px 0">
+					<Checkbox>{c?.list}</Checkbox>
+				</Flex>
+			))}
+		</>
+	),
+	showArrow: false,
+	extra: (
+		<Box>
+			<Image src={DownArrow} />
+		</Box>
+	),
+}));
 
-const CollapseDropdown = [
-	{
-		key: 1,
-		label: <S.FCategoryName>Category</S.FCategoryName>,
-		children: (
-			<>
-				<Search placeholder="Search" prefix={<SearchOutlined />} />
-				{CheckboxList?.map((c) => (
-					<Flex key={c.id} flexDirection="column" padding="5px 0">
-						<Checkbox>{c?.list}</Checkbox>
-					</Flex>
-				))}
-			</>
-		),
-		showArrow: false,
-		extra: (
-			<Box>
-				<Image src={DownArrow} />
-			</Box>
-		),
-	},
-];
 export default function Filter() {
 	return (
 		<S.FilterContainer>
@@ -109,15 +85,15 @@ export default function Filter() {
 				</S.FilterCategory>
 
 				<S.FilterCategory>
-					<Collapse items={CollapseDropdown} bordered={false} defaultActiveKey={['1']} />
+					<Collapse items={CollapseList} bordered={false} defaultActiveKey={['1', '2']} />
 				</S.FilterCategory>
 
-				{productTypes.map((filter) => (
+				{/* {productTypes.map((filter) => (
 					<S.FilterCategory key={filter?.id}>
 						<S.FCategoryName>{filter?.name}</S.FCategoryName>
 						<Image src={DownArrow} />
 					</S.FilterCategory>
-				))}
+				))} */}
 			</S.FliterBorder>
 		</S.FilterContainer>
 	);
