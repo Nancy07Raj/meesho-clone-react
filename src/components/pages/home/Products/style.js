@@ -44,6 +44,10 @@ export const FilterCategory = styled(Flex)`
 	}
 	.ant-collapse {
 		width: 100%;
+		.ant-collapse-item {
+			margin: 10px 0;
+			padding-bottom: 10px;
+		}
 		.ant-collapse-header {
 			padding: 0;
 		}
