@@ -1,5 +1,5 @@
 import React from 'react';
-import { Select, Checkbox, Input, Collapse } from 'antd';
+import { Select, Checkbox, Input, Collapse, Button } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import DownArrow from 'assets/svg/down-arrow.svg';
 import { Flex, Box, Image } from 'components/atom';
@@ -39,16 +39,24 @@ const items = [
 const CollapseList = productTypes?.map((p) => ({
 	key: p?.id,
 	label: <S.FCategoryName>{p?.name}</S.FCategoryName>,
-	children: (
-		<>
-			<Search placeholder="Search" prefix={<SearchOutlined />} />
-			{p?.list?.map((c) => (
-				<Flex key={c.id} flexDirection="column" padding="5px 0">
-					<Checkbox>{c?.list}</Checkbox>
-				</Flex>
-			))}
-		</>
-	),
+
+	children:
+		p?.type === 'collapse' ? (
+			<>
+				<Search placeholder="Search" prefix={<SearchOutlined />} />
+				{p?.list?.map((c) => (
+					<Flex key={c.id} flexDirection="column" padding="5px 0">
+						<Checkbox>{c?.list}</Checkbox>
+					</Flex>
+				))}
+			</>
+		) : (
+			p?.list?.map((x) => (
+				<Button style={{ margin: '5px' }} key={x?.id}>
+					{x?.list}
+				</Button>
+			))
+		),
 	showArrow: false,
 	extra: (
 		<Box>
@@ -56,6 +64,8 @@ const CollapseList = productTypes?.map((p) => ({
 		</Box>
 	),
 }));
+
+console.log(productTypes.map((g) => g.type === 'collapse'));
 
 export default function Filter() {
 	return (

@@ -1414,6 +1414,7 @@ const productTypes = [
 	{
 		id: 1,
 		name: 'Category',
+		type: 'collapse',
 		list: [
 			{
 				id: 1,
@@ -1440,6 +1441,7 @@ const productTypes = [
 	{
 		id: 2,
 		name: 'Gender',
+		type: 'button',
 		list: [
 			{
 				id: 1,
